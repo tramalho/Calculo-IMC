@@ -62,7 +62,7 @@
                                     <action selector="calculate:" destination="Nro-RB-hzg" eventType="touchUpInside" id="oH2-Yj-Bvv"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQj-3S-WxQ">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQj-3S-WxQ">
                                 <rect key="frame" x="0.0" y="278" width="414" height="458"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seu Índice de Massa Corporal é" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqX-jx-t8D">
@@ -130,6 +130,7 @@
                         <viewLayoutGuide key="safeArea" id="jXd-dj-Elr"/>
                     </view>
                     <connections>
+                        <outlet property="ResultContainer" destination="GQj-3S-WxQ" id="L5C-wV-fAL"/>
                         <outlet property="ivResult" destination="iG3-Tb-2Aj" id="jDT-zm-7Ua"/>
                         <outlet property="tfHeight" destination="KIi-Bb-sWE" id="QGr-2A-Obl"/>
                         <outlet property="tfResult" destination="ymc-7O-1VI" id="aFH-1M-d0i"/>
