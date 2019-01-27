@@ -21,6 +21,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
 
     @IBAction func calculate(_ sender: Any) {
         
@@ -38,13 +42,13 @@ class ViewController: UIViewController {
             case 0..<16:
                 result = "Magreza"
                 image  = "abaixo"
-            case 0..<16:
+            case 16..<18.5:
                 result = "Abaixo do Peso"
                 image  = "abaixo"
-            case 0..<16:
+            case 18.5..<25:
                 result = "Peso Ideal"
                 image  = "ideal"
-            case 0..<16:
+            case 25..<30:
                 result = "Sobrepeso"
                 image  = "sobre"
             default:
@@ -52,8 +56,10 @@ class ViewController: UIViewController {
                 image  = "obesidade"
         }
         
-        tfResult.text = result
+        tfResult.text = "\(Int(imc)): \(result)"
         ivResult.image = UIImage(named: image)
         ResultContainer.isHidden = false
+        
+        view.endEditing(true)
     }
 }
